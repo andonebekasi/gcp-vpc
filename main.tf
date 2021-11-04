@@ -30,4 +30,4 @@ subnets = [
       subnet_flow_logs_metadata = "INCLUDE_ALL_METADATA"
     }
   ]
-
+}
