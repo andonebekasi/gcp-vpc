@@ -3,6 +3,6 @@ provider "google" {
   region  = "asia-southeast2"
 }
 
-resource "google-compute_network" "vpc_network" {
-name = "test_terraform_vpc"
+resource "google_compute_network" "vpc_network" {
+  name = "vpc-network"
 }
