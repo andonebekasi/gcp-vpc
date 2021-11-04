@@ -3,9 +3,11 @@ provider "google" {
   region  = "asia-southeast2"
 }
 
-resource "google_compute_network" "vpc_network" {
+resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {
   name = "VPC-Danamon"
-  region  = "asia-southeast2"
+  ip_cidr_range = "192.168.0.0/16"
+  region        = "asia-southeast2"
+  network       = google_compute_network.custom-test.id
 }
 
 
